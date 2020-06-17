@@ -2,3 +2,9 @@
 <p>
   We can just start typing some stuff
 </p>
+
+<p *ngFor="let c of myCounter.counters">
+  Counter --- {{ c.count }} --- <button (click)="c.increment()">Increment</button>
+  <button (click)="c.deleteMe()">Delete Me</button>
+</p>
+<button (click)="myCounter.addCounter()">Add a Counter</button>
